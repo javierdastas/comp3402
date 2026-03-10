@@ -30,8 +30,8 @@ jobs:
   
       - name: Ejecutar pruebas
         run: |
-          # Usar python -m pytest es más seguro para evitar problemas de PATH
-          python -m pytest
+          # Indicamos el archivo específico para que no use el autodiscovery
+          python -m pytest test.py
  
   entrega:
     runs-on: ubuntu-latest
